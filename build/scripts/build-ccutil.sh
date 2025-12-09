@@ -16,6 +16,8 @@
 EXCLUDED_TITLES="rhdh-plugins-reference"
 BRANCH="main"
 
+echo "HELLO WORLD"
+
 while [[ "$#" -gt 0 ]]; do
   case $1 in
     '-b') BRANCH="$2"; shift 1;;
