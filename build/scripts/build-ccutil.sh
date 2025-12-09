@@ -16,8 +16,6 @@
 EXCLUDED_TITLES="rhdh-plugins-reference"
 BRANCH="main"
 
-echo "HELLO WORLD"
-
 while [[ "$#" -gt 0 ]]; do
   case $1 in
     '-b') BRANCH="$2"; shift 1;;
@@ -28,6 +26,8 @@ done
 rm -fr titles-generated/;
 mkdir -p titles-generated/"${BRANCH}";
 echo "<html><head><title>Red Hat Developer Hub Documentation Preview - ${BRANCH}</title></head><body><ul>" > titles-generated/"${BRANCH}"/index.html;
+
+echo "HELLO WORLD"
 # exclude the rhdh-plugins-reference as it's embedded in the admin guide
 # shellcheck disable=SC2044,SC2013
 set -e
